@@ -1,0 +1,42 @@
+<section class="Signup">
+    <div class="login col-lg-4 shadow-lg">
+        <h4> Registration form</h4>
+        <form class="content" [formGroup]="Signup" (ngSubmit)="submitData();" >
+            <div class="form-group">
+                <label for="UserName">User Name</label>
+              <input type="text" formControlName="userName" class="form-control" id="UserName">
+              <div *ngIf="userName.invalid && (userName.touched || userName.dirty)">
+                <span class="error" *ngIf="userName.errors?.required">*User Name is required</span>
+                <span class="error" *ngIf="userName.errors?.pattern">*Enter only characters</span>
+              </div>
+            </div>
+              <div class="form-group">
+                <label for="MobileNumber">Mobile Number</label>
+                <input type="text" formControlName="mobileNumber"class="form-control" id="MobileNumber">
+                <div *ngIf="mobileNumber.invalid && mobileNumber.touched">
+                  <span class="error" *ngIf="mobileNumber.errors?.required">*Mobile number is required</span>
+                  <span class="error" *ngIf="mobileNumber.errors?.pattern">*Enter only characters</span>
+                </div>
+              </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" formControlName="emailId" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div *ngIf="emailId.invalid && (emailId.touched || emailId.dirty)">
+                <span class="error" *ngIf="emailId.errors?.required">*email is required</span>
+                <span class="error" *ngIf="emailId.errors?.email">*Enter valid email address </span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+              <div *ngIf="password.invalid && (password.touched || password.dirty)">
+                <span class="error" *ngIf="password.errors?.required">*password is required</span>
+                <span class="error" *ngIf="password.errors?.pattern">*Password Must Contain(4-15) 1-char! 1-number!</span>
+              </div>
+            </div>
+            <a routerLink="/Destination" class="btn btn-primary">Sign Up</a> &nbsp;
+          </form>
+          <a routerLink="/Booknow">already a member? Click to Login</a>
+    </div>
+
+</section>

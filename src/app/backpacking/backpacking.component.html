@@ -1,0 +1,18 @@
+<section class="backpacking">
+    <div class="container">
+        <h3 class="text-center">Backpacking India</h3>
+        <div class="row">
+            <div class="col-lg-10" *ngFor="let ds of backpacking">
+                <div class="box" >
+                    <img src="{{ds.image}}" width="40%" height=50%  >
+                    <h3>{{ds.name}}</h3>
+                    <p>{{ds.description}}</p>
+                    <button class="btn btn-primary">{{ds.price}}</button> &nbsp;
+                    <a routerLink="/Booknow" class="btn btn-small btn-primary">Book now</a>
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

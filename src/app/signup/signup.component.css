@@ -1,0 +1,14 @@
+.Signup
+{
+    background-color: rgb(205, 240, 236);
+    padding : 140px 100px;
+}
+.login
+{
+    background-color: whitesmoke;
+    padding: 20px 40px;
+}
+.error
+{
+    color: red;
+}
